@@ -39,7 +39,7 @@ rusqlite = { version = "0.32", features = ["bundled", "functions", "vtab", "load
 sqlite-vec = "0.1.7-alpha.2"
 
 # Local embeddings (default - no API key needed)
-fastembed = "5.8"
+fastembed = { version = "5.8", default-features = false, features = ["ort-load-dynamic", "hf-hub-native-tls"] }
 
 # GGUF embeddings via llama.cpp (optional, requires C++ compiler)
 llama-cpp-2 = { version = "0.1", optional = true }
